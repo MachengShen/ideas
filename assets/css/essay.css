@@ -1,0 +1,149 @@
+/* Optional long-form essay styling for a static GitHub Pages site */
+
+:root {
+  --essay-max-width: 760px;
+  --essay-text: #111111;
+  --essay-muted: #666666;
+  --essay-link: #1f5fbf;
+  --essay-border: #e6e6e6;
+  --essay-bg: #ffffff;
+  --essay-callout-bg: #f7f9fc;
+}
+
+body {
+  margin: 0;
+  background: var(--essay-bg);
+  color: var(--essay-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.essay-shell {
+  max-width: var(--essay-max-width);
+  margin: 0 auto;
+  padding: 48px 24px 88px;
+}
+
+.essay-backlink {
+  margin-bottom: 24px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+.essay-title {
+  margin: 0 0 10px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.essay-subtitle {
+  margin: 0 0 18px;
+  color: var(--essay-muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.essay-meta {
+  margin: 0 0 28px;
+  color: var(--essay-muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+.essay-callout {
+  margin: 24px 0 36px;
+  padding: 14px 16px;
+  border: 1px solid var(--essay-border);
+  border-radius: 12px;
+  background: var(--essay-callout-bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.essay-content {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.12rem;
+  line-height: 1.88;
+}
+
+.essay-content p {
+  margin: 0 0 1.3em;
+}
+
+.essay-content h2 {
+  margin: 2.7rem 0 0.85rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.essay-content h3 {
+  margin: 2rem 0 0.65rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.essay-content ul,
+.essay-content ol {
+  margin: 0 0 1.35em 1.25em;
+  padding: 0;
+}
+
+.essay-content li + li {
+  margin-top: 0.45em;
+}
+
+.essay-content blockquote {
+  margin: 1.6em 0;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--essay-border);
+  color: #333333;
+}
+
+.essay-content strong {
+  font-weight: 700;
+}
+
+.essay-content a,
+.essay-backlink a,
+.essay-callout a {
+  color: var(--essay-link);
+  text-decoration: none;
+}
+
+.essay-content a:hover,
+.essay-backlink a:hover,
+.essay-callout a:hover {
+  text-decoration: underline;
+}
+
+.essay-divider {
+  margin: 2.4rem 0;
+  border: 0;
+  border-top: 1px solid var(--essay-border);
+}
+
+.essay-footer-note {
+  margin-top: 3rem;
+  color: var(--essay-muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .essay-shell {
+    padding: 32px 18px 72px;
+  }
+
+  .essay-content {
+    font-size: 1.04rem;
+    line-height: 1.8;
+  }
+}

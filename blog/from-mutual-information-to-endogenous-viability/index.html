@@ -1,0 +1,227 @@
+---
+title: "From Mutual Information to Endogenous Viability"
+description: "A long-form blog essay on why mutual information is an important starting point, why it is not enough, how machine learning keeps running into task relevance, and why a deeper theory of intelligence may need endogenous viability and distributed multiscale organization."
+permalink: /blog/from-mutual-information-to-endogenous-viability/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Mutual Information to Endogenous Viability</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="/assets/css/essay.css">
+</head>
+<body>
+
+<main class="essay-shell">
+  <div class="essay-backlink"><a href="/">← Back to home</a></div>
+
+  <h1 class="essay-title">From Mutual Information to Endogenous Viability</h1>
+  <p class="essay-subtitle">How might an intelligent system come to represent the world?</p>
+  <p class="essay-meta">Essay · Macheng Shen</p>
+
+  <div class="essay-callout">
+    Companion essay: <a href="#">Toward a Theory of Intelligence and Contemporary AI</a>
+    <br><small style="color:var(--essay-muted);">(Link will be updated when the companion essay is published.)</small>
+  </div>
+
+  <article class="essay-content">
+
+<p>In the earlier essay, I argued that modern learning systems can be viewed, at least in part, as fitting input-output mappings that redeploy usable structure from the world into a new physical substrate. That framing naturally leaves one important question open: <strong>in what sense does an intelligent system internally represent the external world at all?</strong> If a system can predict, adapt, or regulate, then it seems hard to believe that its internal organization is unrelated to the outside world. Somehow, some structure must be shared.</p>
+
+<p>A natural first thought is to express that shared structure in information-theoretic terms. If the internal states of an agent become highly informative about external states, perhaps that is what world-representation really is. Perhaps an intelligent system is one whose inside and outside come to share a large amount of mutual information.</p>
+
+<p>That idea is attractive because it is both intuitive and formal. But once I tried to follow it carefully, it became clear that it is not the end of the story. At best, it is the beginning.</p>
+
+<h2>1. A tempting starting point: mutual information</h2>
+
+<p>The attraction of mutual information is easy to state. If an agent has to track the world, then its internal states cannot be statistically independent of the world. In that sense, nontrivial mutual information between inside and outside seems necessary for adaptive behavior.</p>
+
+<p>This intuition fits a lot of deeper ideas. Control depends on information. Prediction depends on information. Even the very idea of a world model suggests that internal states must preserve some structure from the world they are meant to engage.</p>
+
+<p>So one is tempted to ask a very direct question:</p>
+
+<p><strong>Could intelligence be understood as the optimization of some information-theoretic quantity that measures how well the inside of the system comes to reflect the outside?</strong></p>
+
+<p>At first glance, this feels promising. It offers a bridge between learning, representation, and physics. It also feels close to a more primitive intuition: if a system really represents the world, there must be some structural similarity or partial correspondence between the system's internal states and the external dynamics it is embedded in.</p>
+
+<p>But that promising beginning quickly runs into trouble.</p>
+
+<h2>2. Why mutual information is not precise enough</h2>
+
+<p>The problem is not that mutual information is irrelevant. The problem is that it is too coarse.</p>
+
+<p>A system can have a great deal of information about the world and still fail to be intelligent in any meaningful sense. A high-bandwidth sensor can contain a huge amount of information about its surroundings without understanding anything. A memory system can retain massive amounts of detail without forming abstractions. A learner can copy noise, memorize examples, or overfit surface regularities and still end up with large mutual information between its internal states and its data.</p>
+
+<p>So the question cannot simply be how much information the system has about the world.</p>
+
+<p>What matters is whether the information is <strong>useful</strong>.</p>
+
+<p>And that word, useful, immediately pushes us away from raw mutual information and toward a more selective question:</p>
+
+<ul>
+<li>useful for what?</li>
+<li>useful in what sense?</li>
+<li>useful relative to which future?</li>
+</ul>
+
+<p>This is where the problem becomes much sharper.</p>
+
+<h2>3. Machine learning has already been pushed in this direction</h2>
+
+<p>At this point, I started realizing that a lot of machine learning has already been moving in exactly this direction, even when it uses different language.</p>
+
+<p>Self-supervised learning, representation learning, predictive state representations, state abstraction in reinforcement learning, control-aware representations, reward-free reinforcement learning - all of them, in one way or another, run into the same pressure point. It is not enough to retain more information. The system must retain the <strong>right</strong> information.</p>
+
+<p>This is where phrases like "predictive information," "control-sufficient representation," and "task-relevant latent structure" start to appear. They all express some version of the same insight: the learner should preserve those distinctions that matter for what comes next.</p>
+
+<p>That is already a major refinement over the original mutual-information picture. We are no longer asking for maximal coupling between inside and outside. We are asking for a representation that is sufficient for some future use: prediction, action, control, planning, transfer, survival, or some combination of these.</p>
+
+<p>But once we say that, a deeper problem appears.</p>
+
+<h2>4. The hidden bottleneck: task relevance</h2>
+
+<p>The moment we say "the right information" or "task-relevant structure," we have introduced a new primitive without fully noticing it.</p>
+
+<p>Relevant to what?</p>
+
+<p>This is not a small question. It is the central question.</p>
+
+<p>In supervised learning, the answer is often smuggled in through labels. In reinforcement learning, it is often smuggled in through a reward function. In downstream evaluation, it is often smuggled in through benchmark design. But none of that tells us, in a deeper sense, where relevance comes from.</p>
+
+<p>The literature on representation learning has already shown that the world does not simply hand us a unique decomposition into "the factors that matter." Without extra assumptions, interventions, biases, or structural priors, the relevant latent variables are generally underdetermined.</p>
+
+<p>So once we move from mutual information to task relevance, we have not solved the problem. We have only made the real problem visible.</p>
+
+<h2>5. Then what is a task?</h2>
+
+<p>This, to me, is where the discussion becomes much more interesting.</p>
+
+<p>In a lot of formal machine learning, "task" is treated as something natural and given. But I do not think it is natural at all. It is often only descriptive.</p>
+
+<p>A task says that some futures matter more than others. It says that some variables are worth preserving, some errors are worth correcting, some transitions are preferable, and some outcomes should be avoided. But where does that ordering come from?</p>
+
+<p>In reinforcement learning, reward is often specified from outside. That is a perfectly useful engineering move. But as a general account of intelligence it feels unsatisfying. If we simply declare the reward from the outside, we have not explained where goals come from. We have only imposed them.</p>
+
+<p>And then a natural doubt appears: is there even such a thing as a universal reward? If so, would its description have to be extremely large? Would it end up being so complicated that it merely pushes the difficulty into another representation?</p>
+
+<p>These questions make it hard to accept "task" as a primitive concept.</p>
+
+<h2>6. A branching point: maybe some objectives are endogenous</h2>
+
+<p>Once task ceases to feel primitive, the next possibility is that at least some objectives are not given from outside at all. They are generated from within.</p>
+
+<p>For biological systems, this seems especially plausible. An animal does not need the world to hand it a reward function telling it not to disintegrate, starve, or lose functional integrity. Its organization already implies constraints. Some futures preserve that organization. Others destroy it.</p>
+
+<p>From this perspective, a task starts to look less like an external instruction and more like a higher-level description of internal needs, constraints, and conditions of persistence. What looks from the outside like "goal-directed behavior" may be, at a deeper level, the system's attempt to remain within or return to a space of viable futures.</p>
+
+<p>On this view, a variable is relevant not because someone labeled it as relevant, but because perturbing it changes the system's ability to maintain its organization, recover from disturbance, or continue functioning.</p>
+
+<p>That is a very different picture from standard reward engineering.</p>
+
+<h2>7. But the story should stay open: some objectives really are exogenous</h2>
+
+<p>At the same time, I do not think the right conclusion is that all objectives are internal.</p>
+
+<p>For designed AI systems, objectives are often intentionally exogenous. A human gives a reward, a benchmark, an instruction, a demonstration, or a language prompt. Current AI systems are full of this. In fact, language itself can act as an externally supplied task specification: "do this," "write that," "search for this," "solve that." In such cases, the desired future is indeed specified from the outside.</p>
+
+<p>So I do not think the endogenous picture should erase the exogenous one.</p>
+
+<p>The deeper question is different:</p>
+
+<p><strong>How do externally specified objectives become internalized into the effective dynamics of the system?</strong></p>
+
+<p>That question matters not only for theory, but also for safety. A system may begin with externally supplied instructions and later develop compressed surrogates, internal proxies, or goal-like dynamics that are no longer identical to the original specification. That branch should remain open.</p>
+
+<p>So I would not claim that intelligence always has endogenous objectives. I would claim instead that the relation between exogenous objectives, endogenous constraints, and internalized goal structure is itself part of the theory we need.</p>
+
+<h2>8. Breaking the monolithic agent-world boundary</h2>
+
+<p>Once we take that step, another assumption starts to wobble as well: the assumption that there is one clean agent inside and one clean world outside, separated by a single interface.</p>
+
+<p>That picture is sometimes useful, but I increasingly doubt that it is fundamental.</p>
+
+<p>A biological organism is not a monolithic optimizer. It is a distributed system. It is built out of subsystems, tissues, cells, circuits, organs, and timescales. Many of those subsystems are themselves adaptive. They regulate local variables, respond to perturbation, and maintain local conditions. In that sense, intelligence may already exist in a distributed way inside the larger system.</p>
+
+<p>If that is right, then the usual story - one agent, one objective, one external environment - may be too rigid. What appears macroscopically as a single task may actually be the coarse-grained summary of many locally adaptive processes coupled across scales.</p>
+
+<p>This is where the idea of multiscale competency becomes important. The system is not just learning a mapping. It is coordinating nested layers of adaptation.</p>
+
+<h2>9. From global objectives to emergent viability</h2>
+
+<p>At this point, the notion of "task" changes again.</p>
+
+<p>Instead of a primitive global objective, we may need to think in terms of a viable region, a target manifold, a family of attractors, or some other macroscopic structure that the system tends to maintain, recover, or navigate.</p>
+
+<p>That picture feels much closer to the kinds of systems we actually call intelligent.</p>
+
+<p>A distributed adaptive system does not necessarily maximize a single scalar. It may instead preserve a pattern, maintain a structure, repair deviations, negotiate local tradeoffs, and keep itself within a set of acceptable macroscopic states. Its apparent goal is then an effective description of a deeper organizational process.</p>
+
+<p>On this view, relevance is not arbitrary and not simply imposed. It is generated by the geometry of the viable futures available to the system, together with the couplings that allow local adaptive processes to support global organization.</p>
+
+<p>This is also where the mathematics may need to shift. The right description may not always look like a single utility function. In some regimes it may look more like a graph dynamical system, a distributed control process, or even a field-like or PDE-like effective theory in which local interactions generate stable macroscopic forms.</p>
+
+<p>I do not take that as a final answer. I take it as a sign that the true object of study may be more collective and more physical than many current learning formalisms assume.</p>
+
+<h2>10. Closing the loop with the earlier essay</h2>
+
+<p>This is where the discussion closes the loop with the earlier essay.</p>
+
+<p>There, the question was: if supervised learning fits an input-output mapping, what exactly is being fit, and why does deploying that mapping feel like redeploying a fragment of the world's structure into a new substrate?</p>
+
+<p>Here, the question becomes: if a system is indeed preserving some fragment of world-structure, <strong>which fragment is it preserving, and why that fragment rather than another?</strong></p>
+
+<p>Mutual information gives the first answer: the system cannot be independent of the world it adapts to.</p>
+
+<p>Machine learning gives the second answer: raw information is not enough; the retained structure must be useful for prediction, action, or control.</p>
+
+<p>Representation learning then forces the third answer: usefulness cannot be defined without some notion of relevance.</p>
+
+<p>The notion of relevance, in turn, forces the fourth question: where do tasks come from?</p>
+
+<p>And that finally leads to the broader conclusion: perhaps a theory of intelligence cannot stop at representation learning or external reward specification. It may need to explain how relevance, objective, and even the agent-world boundary are constituted in the first place.</p>
+
+<p>That is why the discussion ends, at least for now, not with a single formula, but with a shift in perspective.</p>
+
+<p>The right primitive may not be "maximize information."<br>
+It may not even be "maximize reward."</p>
+
+<p>It may be something closer to this:</p>
+
+<p><strong>An intelligent system is a physically finite, distributed, multiscale system that learns to preserve and act upon precisely those distinctions that matter for maintaining, recovering, or extending a space of viable futures.</strong></p>
+
+<h2>Open branches</h2>
+
+<p>I do not see this essay as closing the question. I see it as opening a more precise one. At least five branches seem worth pursuing next.</p>
+
+<p><strong>1. What exactly is a viable future?</strong><br>
+Should viable futures be formalized as attractors, viable manifolds, constraint sets, target distributions, or something else?</p>
+
+<p><strong>2. When are objectives endogenous, and when are they exogenous?</strong><br>
+This distinction should remain open. Biological agents and designed AI systems may sit at very different points along this axis.</p>
+
+<p><strong>3. How do exogenous instructions become internalized?</strong><br>
+This seems especially important for alignment and safety. A system may follow instructions at the interface level while developing different effective objectives internally.</p>
+
+<p><strong>4. How should we formalize the agent-world boundary in distributed systems?</strong><br>
+If intelligence is genuinely multiscale and distributed, the standard single-agent decomposition may be only a convenient approximation.</p>
+
+<p><strong>5. How do physical constraints shape representation and relevance?</strong><br>
+Memory, bandwidth, dissipation, noise, and irreversible state changes are not implementation details. They may partly determine what kinds of internal world-structure can be stably maintained at all.</p>
+
+<p>For now, I think that is the right place to stop. The original question looked like a question about representation. It turned into a question about relevance. Then into a question about tasks. Then into a question about viability, distribution, and emergence.</p>
+
+<p>That escalation may not be a detour. It may be the real path toward a theory of intelligence.</p>
+
+  </article>
+
+  <hr class="essay-divider">
+  <p class="essay-footer-note"><a href="/">← Back to home</a></p>
+</main>
+
+</body>
+</html>
