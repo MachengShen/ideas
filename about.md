@@ -1,7 +1,8 @@
 "# About Macheng Shen
 
-**Principal Investigator at Shanghai Qizhi Institute**  
-*Exploring the foundations of intelligence, human-AI collaboration, and cognitive augmentation*
+*Independent researcher exploring the foundations of intelligence, human-AI collaboration, and cognitive augmentation*
+
+*All views expressed here are my own and do not represent any institution.*
 
 ## Current Focus
 
