@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safety in a Computational Universe</title>
+  <meta name="description" content="A pedagogical position note arguing that AI safety may be a race over which computations become real first.">
+  <link rel="canonical" href="https://machengshen.github.io/ideas/blog/safety-in-a-computational-universe/">
+  <link rel="stylesheet" href="/ideas/assets/css/essay.css">
+</head>
+<body>
+  <main class="essay-container">
+    <p><a href="/ideas/">&larr; Back to home</a></p>
+
+    <h1>Safety in a Computational Universe</h1>
+    <p class="subtitle">Why civilizational safety may be a race over which computations become real first</p>
+    <p class="meta">Position Note &middot; Macheng Shen &middot; Collaborative drafting: GPT-5.4 Pro &middot; 2026-03-15</p>
+
+    <p><strong>Abstract.</strong> This note proposes a simple but consequential reframing. If the world is usefully viewed as computational, then AI safety is not only a problem of values, instructions, or benchmark capability. It is also a race over which computations are discovered, verified, deployed, and stabilized first. A civilization remains safe not because it has written down a perfect principle once and for all, but because it manages to keep dangerous computations from scaling faster than safe ones. Advanced AI matters here not only as a powerful tool, but as a new organ of societal self-modeling: for the first time, human society may be able to simulate itself in a more fine-grained, action-conditioned way than traditional social science allowed. This does not make society perfectly self-predictable, and it certainly does not guarantee self-mastery. But it may change the practical frontier of what can be forecast, stress-tested, and controlled. Our main finding is therefore a reframing: safety is better understood as the discovery and maintenance of computations that keep the system inside viable regions, under uncertainty and reflexivity, rather than as the static optimization of a single reward. Our main conjecture is that the deepest safety problem may be a competition between safe and dangerous computation pathways. This note ends by sketching what that implies for current action and for future theory.</p>
+
+    <hr>
+
+    <h2>1. Why start from computation at all?</h2>
+    <p>Many safety discussions begin with alignment, values, or incentives. Those are all important. But there is another, more structural angle.</p>
+    <p>A world model, a policy, a coordination protocol, a jailbreak, a dangerous biological design, a market manipulation strategy, a stabilizing institution, and a robust controller all have something in common: each can be viewed as a <em>computation</em> that maps states, observations, and interventions into consequences.</p>
+    <p>Once we look at the world this way, a different safety question appears:</p>
+    <blockquote>
+      <p>Which computations will become real first, and which of them will gain leverage over the future?</p>
+    </blockquote>
+    <p>That question is still about ethics and governance, but it is no longer only about ethics and governance. It is also about discovery, verification, scaling, and control.</p>
+    <p>This is the core reframing of the note.</p>
+
+    <hr>
+
+    <h2>2. The warm-up intuition: self-predictive systems</h2>
+    <p>A useful place to start is not civilization, but a simpler object: a self-predictive system.</p>
+    <p>Imagine a system that tries to model how it and its environment will co-evolve under different actions. It does not merely predict what happens next. It predicts <em>action-conditioned futures</em> and uses those predictions to reduce survival risk.</p>
+    <p>The natural question is then:</p>
+    <blockquote>
+      <p>What determines the optimality bound of such a system's decisions?</p>
+    </blockquote>
+    <p>At first glance, the answer might seem to be "better prediction." But that is already too simple.</p>
+    <p>Decision quality depends on at least five things:</p>
+    <ol>
+      <li><strong>Observability</strong>: can the system see the variables that actually matter for risk?</li>
+      <li><strong>Model error</strong>: does its predictive model contain the real dynamics, or only a convenient fiction?</li>
+      <li><strong>Controllability</strong>: even if it predicts danger, can it still steer away from it?</li>
+      <li><strong>Planning quality</strong>: can it actually compute a good intervention in time?</li>
+      <li><strong>Reflexivity</strong>: once its prediction is used, does that prediction itself change the system being predicted?</li>
+    </ol>
+    <p>This immediately shows why safety is not just an abstract reward-optimization problem. It is a problem of remaining inside a <em>viable region</em> under uncertainty, intervention, and feedback.</p>
+    <p>That viability framing matters, because it gives us a concrete notion of relevance. The relevant variables are not simply the variables that improve average prediction accuracy. They are the variables that causally affect whether the system enters a catastrophic region or stays inside a viable one.</p>
+
+    <hr>
+
+    <h2>3. From individual systems to human society</h2>
+    <p>Now scale the picture up.</p>
+    <p>Human society is also, in an important sense, a self-predictive system. It gathers information about itself, forms forecasts, debates futures, makes interventions, and then lives inside the consequences of those interventions.</p>
+    <p>But historically, human society has been very poor at high-resolution self-prediction.</p>
+    <p>Why? Because traditional self-models were usually too coarse, too aggregated, too weak at handling counterfactual interventions, and too limited in their ability to model many interacting individuals at once.</p>
+    <p>Social science gave us partial models, institutional memory gave us partial heuristics, and statistics gave us useful aggregates. But for most of history, society had nothing like a rich, reusable, action-conditioned simulator of itself.</p>
+    <p>This is why the present moment is unusual.</p>
+    <p>Advanced AI may become, at least in part, an <em>externalized self-modeling organ for human society</em>.</p>
+    <p>That is a strong phrase, but it is a useful one. It does not mean society becomes perfectly transparent to itself. It means society may acquire a new representational substrate for building finer-grained, more interactive, more counterfactual models of collective behavior.</p>
+    <p>This is exactly why policy simulation, agent simulation, and AI-assisted institutional forecasting suddenly feel plausible in a new way. Something changed. Not because society solved its epistemic problems, but because it may have acquired a new modeling organ.</p>
+
+    <hr>
+
+    <h2>4. The key caution: better self-modeling is not self-mastery</h2>
+    <p>At this point, an overly optimistic story becomes tempting:</p>
+    <blockquote>
+      <p>If AI can model us well enough, we can just compute the safe solution first, and then we are fine.</p>
+    </blockquote>
+    <p>I do not think that follows.</p>
+    <p>There are at least three reasons.</p>
+
+    <h3>4.1 Prediction changes the system</h3>
+    <p>A forecast that enters policy is not an innocent observer. It changes incentives, expectations, and strategic responses. Once a society acts on a prediction, the society is no longer the one that was predicted before the prediction was announced.</p>
+    <p>So the problem is reflexive from the start.</p>
+
+    <h3>4.2 The safe answer may not be a single answer</h3>
+    <p>Some problems admit a fixed solution. But civilizational safety is more likely to look like a <em>continually maintained control regime</em> than a one-time proof. The relevant object may not be a closed-form answer, but a collection of controllers, institutions, guardrails, and monitoring loops that keep the system inside viable regions over time.</p>
+
+    <h3>4.3 Dangerous computations may be easier to scale than safe ones</h3>
+    <p>A harmful exploit, destabilizing manipulation strategy, persuasive deception mechanism, or destructive design may spread quickly once discovered. Safe controllers, by contrast, often require more validation, more coordination, more trust, and more institutional integration.</p>
+    <p>So the race is not merely about discovering some answer. It is about whether safe computations can be discovered, verified, and stabilized <em>faster than dangerous computations can diffuse</em>.</p>
+
+    <hr>
+
+    <h2>5. The computational-universe turn</h2>
+    <p>Now we can state the stronger conjecture.</p>
+    <p>If we adopt a computational-universe lens &mdash; not necessarily as a metaphysical dogma, but as a useful working view &mdash; then the deep safety question becomes:</p>
+    <blockquote>
+      <p>Which computations will be physically instantiated, amplified, and given control first?</p>
+    </blockquote>
+    <p>Under this lens, safety is not only about what an agent values. It is also about which search procedures get run, which simulation pipelines become trusted, which policies are selected, which dangerous solution concepts become available, and which institutional controllers are deployed in time.</p>
+    <p>This leads to a very simple but important slogan:</p>
+    <blockquote>
+      <p><strong>Safety may be a race over which computations become real first.</strong></p>
+    </blockquote>
+    <p>But the point needs to be made carefully. It does <strong>not</strong> mean that there exists a single perfect safe computation waiting to be found.</p>
+    <p>It means that civilization may need to do four things faster than the threat side does its analogues:</p>
+    <pre><code>T_safe = T_discover + T_verify + T_deploy + T_coordinate</code></pre>
+    <p>while dangerous capabilities effectively move on something like</p>
+    <pre><code>T_threat = T_discover-threat + T_scale + T_exploit</code></pre>
+    <p>The practical problem is therefore comparative, not absolute.</p>
+    <p>We do not need omniscience. We need safe computation pathways that become real, trusted, and operational before dangerous ones dominate.</p>
+
+    <hr>
+
+    <h2>6. What I think we have actually found</h2>
+    <p>This note is a position piece, not a theorem paper, so it is important to separate what looks like a finding from what remains a conjecture.</p>
+
+    <h3>6.1 Findings</h3>
+    <p><strong>Finding 1.</strong> For safety, relevance should be defined in terms of <em>viability</em>, not generic prediction quality.</p>
+    <p>A variable is safety-relevant if changing it changes whether the system remains inside a viable region or falls into a catastrophic one.</p>
+    <p><strong>Finding 2.</strong> Advanced AI makes high-resolution, action-conditioned societal self-modeling newly plausible.</p>
+    <p>This does not settle the problem, but it changes its practical tractability.</p>
+    <p><strong>Finding 3.</strong> Better prediction alone does not solve safety.</p>
+    <p>Because of reflexivity, model error, controllability limits, and planning constraints, safety is a control problem under uncertainty, not just a forecasting problem.</p>
+    <p><strong>Finding 4.</strong> The right object is not a universal reward, but a family of computations that maintain viability under intervention.</p>
+    <p>This aligns better with self-predictive systems, world models, and reach-avoid style reasoning than with one monolithic scalar objective.</p>
+
+    <h3>6.2 Conjectures</h3>
+    <p><strong>Conjecture 1.</strong> The deepest AI safety problem may be a race over safe versus dangerous computations.</p>
+    <p><strong>Conjecture 2.</strong> Human society is beginning to acquire an externalized self-modeling organ, and this changes the frontier of what collective forecasting and intervention design can achieve.</p>
+    <p><strong>Conjecture 3.</strong> Dangerous computations may often enjoy an asymmetry: they can be easier to discover, easier to distribute, and easier to weaponize than safe civilizational controllers are to verify and coordinate.</p>
+    <p>These conjectures are not yet proofs. But I think they are strong enough to guide research and institutional design.</p>
+
+    <hr>
+
+    <h2>7. What this suggests we should do now</h2>
+    <p>If the framing above is even partly right, then current action should shift in a specific direction.</p>
+
+    <h3>7.1 Build hazard-relevant world models, not just larger generic predictors</h3>
+    <p>We do not primarily need systems that predict everything a little better. We need systems that identify variables, interventions, and cascades that matter for catastrophic risk.</p>
+    <p>That means action-conditioned, uncertainty-aware, hazard-focused modeling.</p>
+
+    <h3>7.2 Treat safe computation as something that must be verified and stabilized</h3>
+    <p>Finding a candidate solution is not enough. A safety-relevant controller must also be checked, stress-tested, monitored under shift, and embedded in institutions that can keep it working.</p>
+
+    <h3>7.3 Invest in containment and compute governance, not only positive capability</h3>
+    <p>If safety is partly a race over computations, then restricting which dangerous computations can be cheaply discovered, run, or scaled is itself a safety intervention.</p>
+    <p>This means sandboxing, staged release, capability throttling, red-teaming, and governance over compute and data access are not side issues. They are part of the core problem.</p>
+
+    <h3>7.4 Build societal self-modeling infrastructure carefully</h3>
+    <p>A civilization with stronger self-models can make better decisions. But it can also become more fragile if those models are overtrusted, gamed, or politically captured.</p>
+    <p>So social self-modeling needs pluralism, adversarial review, uncertainty reporting, and institutional humility.</p>
+
+    <h3>7.5 Focus on viability regions rather than one-shot perfection</h3>
+    <p>The practical aim should be to keep critical systems inside viable regions despite uncertainty, delay, and adaptation. In many cases, that is more realistic than searching for a final global optimum.</p>
+
+    <hr>
+
+    <h2>8. The deeper theoretical picture</h2>
+    <p>Once safety is framed this way, several lines of previous discussion suddenly connect.</p>
+
+    <h3>8.1 Task relevance becomes survival relevance</h3>
+    <p>We previously asked where task relevance comes from. In the present framing, the answer becomes more concrete: the most relevant variables are those that matter for survival, recovery, and staying within viable regions.</p>
+
+    <h3>8.2 World models become intervention models</h3>
+    <p>A world model is not important merely because it predicts what comes next. It matters because it supports decisions about what to do next.</p>
+    <p>For safety, this means the right model is not only descriptive. It must be intervention-aware.</p>
+
+    <h3>8.3 Society should not be modeled as a monolithic optimizer</h3>
+    <p>Human society is distributed, multiscale, and reflexive. Its self-models are built by many institutions, many actors, many incentives, and many competing narratives.</p>
+    <p>So any serious safety theory must ultimately become a theory of <em>distributed, multiscale self-prediction and control</em>.</p>
+    <p>That is why this note should be read as a beginning, not an end.</p>
+
+    <hr>
+
+    <h2>9. Where this theory could go next</h2>
+    <p>I see at least four strong future directions.</p>
+
+    <h3>9.1 Computational viability theory</h3>
+    <p>We need a sharper theory of what it means for a computation, controller, or institution to keep a large system inside viable regions over long time scales.</p>
+
+    <h3>9.2 The complexity gap between safe and dangerous computations</h3>
+    <p>How hard is it, in general, to discover and verify dangerous solutions versus safe controllers? If there is a persistent asymmetry here, it may be one of the deepest safety facts.</p>
+
+    <h3>9.3 Reflexive forecasting and policy design</h3>
+    <p>How do we build systems that remain useful when their own forecasts change the world they forecast?</p>
+
+    <h3>9.4 Externalized self-modeling organs for society</h3>
+    <p>If advanced AI really is becoming a societal self-modeling organ, we need a principled theory of how much trust such organs deserve, how they fail, and how they should be institutionally coupled to human judgment.</p>
+
+    <hr>
+
+    <h2>10. Closing</h2>
+    <p>The core message of this note is simple.</p>
+    <p>Safety should not be imagined as a one-time answer to a static question. In a computational world, and especially in a world with advanced AI, safety is better understood as a race and a regime:</p>
+    <ul>
+      <li>a race over which computations become real first,</li>
+      <li>and a regime for keeping the system inside viable regions even after those computations enter the world.</li>
+    </ul>
+    <p>If this is right, then the immediate task is not merely to build more capable models. It is to build better self-models, safer controllers, stronger validation loops, and institutions that can discover, certify, deploy, and maintain safe computations faster than dangerous ones can spread.</p>
+    <p>That, I think, is a research agenda worth making public early.</p>
+
+    <hr>
+    <p><a href="/ideas/">&larr; Back to home</a></p>
+  </main>
+</body>
+</html>
